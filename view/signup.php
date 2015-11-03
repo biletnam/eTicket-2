@@ -1,12 +1,12 @@
 <?php
-/* inscription + redirection vers sign in / vérificationn données */
+/*inscription + redirection vers sign in / vérificationn données
 require'../model/bdd.php';
 $bdd = new Bdd();
 $donnees = $bdd->donnees();
-  for ($p=0; $p < count($donnees) ; $p++) {
-  	echo 'mon pseudo est '.$donnees[$p]['pseudo'].'<br>';
-  };
-  
+ for ($p=0; $p < count($donnees) ; $p++) {
+     echo 'mon pseudo est '.$donnees[$p]['pseudo'].'<br>';
+ };*/
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ $donnees = $bdd->donnees();
   </head>
   <body>
     <h3 style="margin-top : 50px;">Inscription : </h3>
-    <form  class="" action="../controller/signupCtrl.php" method="post">
+    <form  class="" action="../src/controller/signupCtrl.php" method="post">
       <input type="text" name="pseudo" placeholder="pseudo">
       <input type="password" name="password" placeholder="password">
       <input type="email" name="email" placeholder="email">
