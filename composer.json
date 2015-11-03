@@ -1,0 +1,14 @@
+{
+    "name": "justine/eticket",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "justinecavaglieri",
+            "email": "test@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "twig/twig": "~1.0"
+    }
+}
