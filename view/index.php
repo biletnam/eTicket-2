@@ -4,5 +4,5 @@
  				$reponse = $bdd->query('SELECT * FROM account');
  				$donnees = $reponse->fetchAll();
 
-		echo 'mon pseudo est.'$pseudo;
+		echo 'mon pseudo est'.$pseudo;
   ?>
