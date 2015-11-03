@@ -1,14 +1,18 @@
 <?php
+<<<<<<< HEAD:src/model/user.php
 
 namespace App\Model;
 
 class User
 {
+=======
+require 'bdd.php';
+class User{
+>>>>>>> 000ec9251c203c05b881b4c917cd89e02199b7ce:model/user.php
   private $id;
   private $pseudo;
   private $password;
   private $email;
-  private $bdd;
 
   function __construct(){
     $ctp = func_num_args();
@@ -16,16 +20,16 @@ class User
 
     switch($ctp)
     {
-      case 3:
-      $this->bdd = $args[0];
-      $this->pseudo = $args[1];
-      $this->password = $args[2];
+      case 2:
+
+      $this->pseudo = $args[0];
+      $this->password = $args[1];
       break;
-      case 4:
-      $this->bdd = $args[0];
-      $this->pseudo = $args[1];
-      $this->password = $args[2];
-      $this->email = $args[3];
+      case 3:
+
+      $this->pseudo = $args[0];
+      $this->password = $args[1];
+      $this->email = $args[2];
       break;
     }
   }
@@ -36,8 +40,9 @@ class User
 
   function verif_exist()
   {
-    $this->bdd->connexion();
-    $pdo = $this->bdd->getPdo();
+    $bdd = new Bdd();
+    $bdd->connexion();
+    $pdo = $bdd->getPdo();
     $pseudo = $this->pseudo;
     $password = $this->password;
     $query = "SELECT id FROM account WHERE pseudo = ?";
@@ -57,8 +62,9 @@ class User
 
   function add()
   {
-    $this->bdd->connexion();
-    $pdo = $this->bdd->getPdo();
+    $bdd = new Bdd();
+    $bdd->connexion();
+    $pdo = $bdd->getPdo();
 
     $query = "INSERT INTO account (pseudo,password,email) VALUES(?,?,?)";
     $prep = $pdo->prepare($query);
@@ -74,8 +80,9 @@ class User
   }
 
   function connect(){
-    $this->bdd->connexion();
-    $pdo = $this->bdd->getPdo();
+    $bdd = new Bdd();
+    $bdd->connexion();
+    $pdo = $bdd->getPdo();
     $query = "SELECT id,email FROM account WHERE pseudo = ? AND password = ?";
     $prep = $pdo->prepare($query);
     $prep->bindValue(1,$this->pseudo,PDO::PARAM_STR);
@@ -86,4 +93,11 @@ class User
     $this->email = $array["email"];
     $prep->closeCursor();
   }
+<<<<<<< HEAD:src/model/user.php
+=======
+
+
+
+
+>>>>>>> 000ec9251c203c05b881b4c917cd89e02199b7ce:model/user.php
 }
