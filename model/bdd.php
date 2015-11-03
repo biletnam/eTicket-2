@@ -22,7 +22,6 @@ class Bdd{
         die($msg);
     }
   }
-
   function getPdo(){return $this->pdo;}
   function donnees(){
     $bdd = new PDO('mysql:host=localhost;dbname=e-ticket;charset=utf8', 'root', 'root');
@@ -32,11 +31,3 @@ class Bdd{
   }
 
 }
-
-
-
-
-
-
-
- ?>
