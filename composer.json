@@ -9,6 +9,7 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "twig/twig": "~1.0"
+        "twig/twig": "~1.0",
+        "mandrill/mandrill": "1.0.*"
     }
 }
