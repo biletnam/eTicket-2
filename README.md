@@ -2,20 +2,20 @@
 
 ## ARBORESCENCE
 
-1. /model
-  1. User.php (boolean : admin)
-  2. Bdd.php
-2. /view
-  1. index.php
-  2. signin.php
-  3. signup.php
-  4. products.php
-  5.  single-product.php
-3. /controller
-  1. signinCtrl.php
-  2. signupCtrl.php
-  3. deconnexionCtrl.php
-  4. reservationCtrl.php
+/model </br>
+\  User.php (boolean : admin) </br>
+\  Bdd.php # Application eTicket </br>
+/view </br>
+\  index.php </br>
+\  signin.php </br>
+\  signup.php </br>
+\  products.php </br>
+\  single-product.php </br>
+/controller </br>
+\  signinCtrl.php </br>
+\  signupCtrl.php </br>
+\  deconnexionCtrl.php </br>
+\  reservationCtrl.php </br>
 
 ## Distribution des tâches 
 
