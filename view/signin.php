@@ -10,6 +10,9 @@
     <title></title>
   </head>
   <body>
-
+    <form class="" action="../signinCtrl.php" method="post">
+      <input type="text" name="pseudo"/>
+      <input type="password" name="password"/>
+    </form>
   </body>
 </html>

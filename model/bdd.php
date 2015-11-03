@@ -1,6 +1,7 @@
 <?php
 
 class Bdd{
+
   private $pdo;
   function __construct(){
 
