@@ -52,7 +52,7 @@ class User{
     $prep->closeCursor();
   }
 
-  function addUser()
+  function add()
   {
     $this->bdd->connexion();
     $pdo = $this->bdd->getPdo();
