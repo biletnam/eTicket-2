@@ -10,12 +10,12 @@ if(isset($_POST['signin'])){
     $_SESSION['user'] = serialize($user);
     echo "Bienvenue ".$user->getPseudo()." !";
     echo "Voici ton mail: ".$user->getEmail();
-    setcookie("msg_signin","Authenticated successfully !",10);
+    setcookie("msg_signin","Authenticated successfully !",time()+10, '/');
   }
   else{
-    setcookie("msg_signin","Authentication failed !",10);
+    setcookie("msg_signin","Authentication failed !",time()+10, '/');
   }
-  header('Location: ../index.php');
+  header('Location: ../view/index.php');
 
 }
 ?>
