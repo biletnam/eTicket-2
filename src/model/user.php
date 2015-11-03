@@ -1,6 +1,9 @@
 <?php
 
-class User{
+namespace App\Model;
+
+class User
+{
   private $id;
   private $pseudo;
   private $password;
@@ -83,7 +86,4 @@ class User{
     $this->email = $array["email"];
     $prep->closeCursor();
   }
-
-
-
 }

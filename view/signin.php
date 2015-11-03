@@ -5,7 +5,7 @@
     <title>e-Ticket</title>
   </head>
   <body>
-    <form class="" action="../controller/signinCtrl.php" method="post">
+    <form class="" action="../src/controller/signinCtrl.php" method="post">
       <input type="text" name="pseudo"/>
       <input type="password" name="password"/>
       <input type="submit" name="signin" value="Envoyer">

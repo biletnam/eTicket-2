@@ -1,5 +1,3 @@
 <?php
 
-  /* Let's go */
-
-?>
+ phpinfo();

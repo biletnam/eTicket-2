@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title|default('Eticjet genrator') }}</title>
+</head>
+<body>
+    {% block body %}
+        <header>
+
+        </header>
+        <main>
+            {% block content %}
+
+            {% endblock %}
+        </main>
+    {% endblock %}
+</body>
+</html>
