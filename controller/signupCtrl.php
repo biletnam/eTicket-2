@@ -9,7 +9,7 @@ if(isset($_POST['pseudo']) && isset($_POST['password']) && isset($_POST['email']
   $user = new User(new Bdd(), $pseudo, $password, $email);
     if(!$user->verif_exist()){
       header('Location: ../view/signup.php');
-      $user->addUser();
+      $user->add();
     }
 }
 

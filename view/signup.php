@@ -6,6 +6,7 @@ $donnees = $bdd->donnees();
   for ($p=0; $p < count($donnees) ; $p++) {
   	echo 'mon pseudo est '.$donnees[$p]['pseudo'].'<br>';
   };
+  
 ?>
 
 <!DOCTYPE html>
