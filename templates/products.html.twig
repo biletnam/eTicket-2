@@ -1,3 +1,12 @@
 
 
-{{ name }}
+
+{% for spectacle in name %}
+    <li>{{ spectacle.id }}</li>
+    <li>{{ spectacle.name }}</li>
+    <li>{{ spectacle.description }}</li>
+    <li>{{ spectacle.price }} €</li>
+    <a href="single-product.php?id={{ spectacle.id }}">Découvrir</a>
+    <br>
+    <br>
+{% endfor %}
