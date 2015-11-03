@@ -4,7 +4,7 @@
 
 ### /model
 
-+  User.php (boolean : admin) 
++  User.php (boolean : admin)
 +  Bdd.php
 
 ### /view
@@ -22,9 +22,9 @@
 +  deconnexionCtrl.php
 +  reservationCtrl.php
 
-## Distribution des tâches 
+## Distribution des tâches
 
-### Fabien & Julie
+### Fabien & Justine
 products.php </br>
 single-product.php </br>
 reservationCtrl.php </br>
