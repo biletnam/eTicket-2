@@ -8,7 +8,6 @@ class ProductsCtrl extends BaseCtrl
         $reponse = $bdd->query('SELECT * FROM product');
         $donnees = $reponse->fetchAll();
 
-
         return $this->render('products.html.twig', [
             'name' => $donnees
         ]);

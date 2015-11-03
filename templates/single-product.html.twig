@@ -1,3 +1,15 @@
-{{ idProduct.name }} <br>
-{{ idProduct.description }} <br>
-{{ idProduct.price }}
+NOM : {{ idProduct.name }} <br>
+DESCRIPTION : {{ idProduct.description }} <br>
+PRIX : {{ idProduct.price }} € <br><br>
+
+<form name="form1" method="post" action="">
+  <p>
+    <label>
+      <input type="hidden" name="name" id="name" value="{{ idProduct.name }}">
+    </label>
+  </p>
+    <label>
+      <input type="submit" name="button" id="button" value="Submit">
+    </label>
+  </p>
+</form>

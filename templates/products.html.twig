@@ -2,10 +2,10 @@
 
 
 {% for spectacle in name %}
-    <li>{{ spectacle.id }}</li>
-    <li>{{ spectacle.name }}</li>
-    <li>{{ spectacle.description }}</li>
-    <li>{{ spectacle.price }} €</li>
+    <li>ID : {{ spectacle.id }}</li>
+    <li>NOM : {{ spectacle.name }}</li>
+    <li>DESCRIPTION : {{ spectacle.description }}</li>
+    <li>PRIX : {{ spectacle.price }} €</li>
     <a href="single-product.php?id={{ spectacle.id }}">Découvrir</a>
     <br>
     <br>
