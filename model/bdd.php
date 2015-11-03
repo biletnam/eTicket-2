@@ -25,11 +25,3 @@ class Bdd{
   function getPdo(){return $this->pdo;}
 
 }
-
-
-
-
-
-
-
- ?>
