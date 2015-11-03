@@ -2,16 +2,21 @@
 
 ## ARBORESCENCE
 
-/model
+### /model
+
 +  User.php (boolean : admin) 
-+  Bdd.php # Application eTicket
-/view
++  Bdd.php
+
+### /view
+
 +  index.php
 +  signin.php
 +  signup.php
 +  products.php
 +  single-product.php
-/controller
+
+### /controller
+
 +  signinCtrl.php
 +  signupCtrl.php
 +  deconnexionCtrl.php
