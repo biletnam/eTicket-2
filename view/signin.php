@@ -1,18 +1,14 @@
-<?php
-
-  /* Connection / redirection vers products */
-
-?>
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>e-Ticket</title>
   </head>
   <body>
-    <form class="" action="../signinCtrl.php" method="post">
+    <form class="" action="../controller/signinCtrl.php" method="post">
       <input type="text" name="pseudo"/>
       <input type="password" name="password"/>
+      <input type="submit" name="signin" value="Envoyer">
     </form>
   </body>
 </html>

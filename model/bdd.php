@@ -22,7 +22,6 @@ class Bdd{
         die($msg);
     }
   }
-
   function getPdo(){return $this->pdo;}
 
 }

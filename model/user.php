@@ -8,7 +8,6 @@ class User{
   private $bdd;
 
   function __construct(){
-    $this->bdd = $bdd;
     $ctp = func_num_args();
     $args = func_get_args();
 
@@ -20,7 +19,7 @@ class User{
       $this->password = $args[2];
       break;
       case 4:
-      $this->bdd = args[0];
+      $this->bdd = $args[0];
       $this->pseudo = $args[1];
       $this->password = $args[2];
       $this->email = $args[3];
@@ -29,13 +28,14 @@ class User{
   }
 
   function getId(){return $this->id;}
-  function getPseudo{return $this->pseudo;}
-  function getEmail{return $this->email;}
+  function getPseudo(){return $this->pseudo;}
+  function getEmail(){return $this->email;}
 
   function verif_exist()
   {
+    $this->bdd->connexion();
     $pdo = $this->bdd->getPdo();
-    $login = $this->login;
+    $pseudo = $this->pseudo;
     $password = $this->password;
     $query = "SELECT id FROM account WHERE pseudo = ?";
     $prep = $pdo->prepare($query);
@@ -49,11 +49,12 @@ class User{
     {
       return false;
     }
-    $bdd->deconnexion();
+    $prep->closeCursor();
   }
 
   function addUser()
   {
+    $this->bdd->connexion();
     $pdo = $this->bdd->getPdo();
 
     $query = "INSERT INTO account (pseudo,password,email) VALUES(?,?,?)";
@@ -64,9 +65,23 @@ class User{
 
     $prep->execute();
 
-    $bdd->deconnexion();
+    $prep->closeCursor();
 
 
+  }
+
+  function connect(){
+    $this->bdd->connexion();
+    $pdo = $this->bdd->getPdo();
+    $query = "SELECT id,email FROM account WHERE pseudo = ? AND password = ?";
+    $prep = $pdo->prepare($query);
+    $prep->bindValue(1,$this->pseudo,PDO::PARAM_STR);
+    $prep->bindValue(2,$this->password,PDO::PARAM_STR);
+    $prep->execute();
+    $array = $prep->fetch();
+    $this->id = $array["id"];
+    $this->email = $array["email"];
+    $prep->closeCursor();
   }
 
 
