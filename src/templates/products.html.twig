@@ -1,18 +1,13 @@
-<<<<<<< HEAD:templates/products.html.twig
-=======
 {% extends 'base.html.twig' %}
 
 {% block content %}
-
-
->>>>>>> 8a43cc8fb28e64155f6d58bc3813dfd14529c9de:src/templates/products.html.twig
-{% for spectacle in name %}
-    <li>ID : {{ spectacle.id }}</li>
-    <li>NOM : {{ spectacle.name }}</li>
-    <li>DESCRIPTION : {{ spectacle.description }}</li>
-    <li>PRIX : {{ spectacle.price }} €</li>
-    <a href="single-product.php?id={{ spectacle.id }}">Découvrir</a>
-    <br>
-    <br>
-{% endfor %}
+  {% for spectacle in name %}
+      <li>ID : {{ spectacle.id }}</li>
+      <li>NOM : {{ spectacle.name }}</li>
+      <li>DESCRIPTION : {{ spectacle.description }}</li>
+      <li>PRIX : {{ spectacle.price }} €</li>
+      <a href="single-product.php?id={{ spectacle.id }}">Découvrir</a>
+      <br>
+      <br>
+  {% endfor %}
 {% endblock %}

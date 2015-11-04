@@ -1,11 +1,10 @@
 <?php
 
-require_once __DIR__.'/vendor/autoload.php';
-require_once __DIR__ . '/controller/BaseCtrl.php';
-require_once __DIR__ . '/controller/SingleProductCtrl.php';
+require __DIR__.'/vendor/autoload.php';
 
-
-$ctrl   = new SingleProductCtrl();
+$twig   = \App\Factory\TwigFactory::create();
+$ctrl   = new \App\Controller\SingleProductCtrl($twig);
 $render = $ctrl->index();
+
 
 echo $render;

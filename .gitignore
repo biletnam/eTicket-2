@@ -1,3 +1,4 @@
-vendor/
-bin/
+/vendor/
+/bin/
+/config/parameters.yml
 .idea/
