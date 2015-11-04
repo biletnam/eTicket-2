@@ -2,14 +2,15 @@
 
 namespace App\Controller;
 
-class signinCtrl extends BaseCtrl
+use App\Model\Bdd;
+use App\Model\User;
+
+class SigninCtrl extends BaseCtrl
 {
 
   public function index()
   {
     if(isset($_POST['signin'])){
-      require_once('../model/User.php');
-      require_once('../model/Bdd.php');
       $pseudo = $_POST['pseudo'];
       $password = $_POST['password'];
       $user = new User(new Bdd(),$pseudo,$password);
@@ -29,6 +30,3 @@ class signinCtrl extends BaseCtrl
 
 
 }
-
-
-

@@ -1,3 +1,7 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
 NOM : {{ idProduct.name }} <br>
 DESCRIPTION : {{ idProduct.description }} <br>
 PRIX : {{ idProduct.price }} € <br><br>
@@ -13,3 +17,5 @@ PRIX : {{ idProduct.price }} € <br><br>
     </label>
   </p>
 </form>
+
+{% endblock %}
