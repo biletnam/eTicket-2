@@ -2,12 +2,14 @@
 
 namespace App\Controller;
 
+use App\Model\Bdd;
+
 abstract class BasePdoCtrl extends BaseCtrl
 {
-    protected $pdo;
+    protected $bdd;
 
-    public function __construct()
+    public function __construct($pdo)
     {
-
+        $this->bdd = new Bdd($pdo);
     }
 }

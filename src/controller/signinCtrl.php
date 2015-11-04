@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Model\Bdd;
 use App\Model\User;
 
-class SigninCtrl extends BaseCtrl
+class SigninCtrl extends BasePdoCtrl
 {
 
   public function index()

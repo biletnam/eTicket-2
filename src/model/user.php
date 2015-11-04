@@ -35,7 +35,7 @@ class User{
   function verif_exist()
   {
     $bdd = new Bdd();
-    $bdd->connexion();
+    // $bdd->connexion();
     $pdo = $bdd->getPdo();
     $pseudo = $this->pseudo;
     $password = $this->password;
@@ -57,7 +57,7 @@ class User{
   function add()
   {
     $bdd = new Bdd();
-    $bdd->connexion();
+    // $bdd->connexion();
     $pdo = $bdd->getPdo();
 
     $query = "INSERT INTO account (pseudo,password,email) VALUES(?,?,?)";
@@ -73,7 +73,7 @@ class User{
 
   function connect(){
     $bdd = new Bdd();
-    $bdd->connexion();
+    // $bdd->connexion();
     $pdo = $bdd->getPdo();
     $query = "SELECT id,email FROM account WHERE pseudo = ? AND password = ?";
     $prep = $pdo->prepare($query);
