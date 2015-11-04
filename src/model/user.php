@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD:src/model/user.php
+
 
 namespace App\Model;
 
@@ -8,7 +8,6 @@ class User
 =======
 require 'bdd.php';
 class User{
->>>>>>> 000ec9251c203c05b881b4c917cd89e02199b7ce:model/user.php
   private $id;
   private $pseudo;
   private $password;
