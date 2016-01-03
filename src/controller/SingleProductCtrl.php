@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controller;
+use Mandrill\Mandrill;
 
 class SingleProductCtrl extends BaseCtrl
 {
@@ -29,6 +30,7 @@ class SingleProductCtrl extends BaseCtrl
 
         /* Send mail */
         if (isset($_POST['name'])) {
+
           $mandrill = new Mandrill('34Yv8CSaxAEYPj0ouWDBng');
 
           $textBody = $donnees[$idProduct-1]['name'].' <br> '.$donnees[$idProduct-1]['price'].'€';
